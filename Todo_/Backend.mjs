@@ -1,8 +1,11 @@
 import fs from 'fs'
+// fS STANDS for the filesystem and this is used to handle the file and the internal works , 
 
 
 const command = process.argv[2]
 const argument = process.argv[3]
+
+
 
 // console.log(fs)
 const FilePath = './task.json'
