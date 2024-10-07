@@ -1,5 +1,7 @@
 const http = require('http')
-const hostname = 3000;
+const hostname = '27.0.0.1';
+const port = 3000;
+
 
 const Server = http.createServer((req,res)=>{
    if (req.url === '/') {
@@ -18,6 +20,6 @@ const Server = http.createServer((req,res)=>{
 })
 
 
-Server.listen(hostname,(req,res)=>{
-    console.log(`Server is listening on http://localhost:${hostname}`)
+Server.listen(port,(req,res)=>{
+    console.log(`Server is listening on http://localhost:${port}`)
 })
