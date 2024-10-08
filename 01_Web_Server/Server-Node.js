@@ -4,6 +4,7 @@ const port = 3000;
 
 
 const Server = http.createServer((req,res)=>{
+    console.log('This is nothing but its the request.',req)
    if (req.url === '/') {
     res.statusCode = 250;
     res.setHeader('Content-Type','text/plain')
