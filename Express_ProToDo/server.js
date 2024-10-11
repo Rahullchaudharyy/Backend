@@ -20,7 +20,7 @@ try {
 }
 
 
-
+// Get the all todos 
 app.get('/todos', (req, res) => {
     let AllTodos;
     try {
@@ -33,6 +33,9 @@ app.get('/todos', (req, res) => {
 
     res.status(200).send(AllTodos)
 })
+
+// get the specifc todo with the id 
+
 app.get('/todos/:id', (req, res) => {
     let AllTodos=[];
     let filterd;
@@ -50,6 +53,9 @@ app.get('/todos/:id', (req, res) => {
 
     res.status(200).send(filterd)
 })
+
+// update the todo with the specific id 
+
 app.put('/todos/:id',(req,res)=>{
     const data = fs.readFileSync('./data.json', 'utf-8') 
     console.log('This is Data ',data)        
@@ -70,6 +76,10 @@ app.put('/todos/:id',(req,res)=>{
         
 
 })
+
+// delete the specific id 
+
+
 app.delete('/todos/:id',(req,res)=>{
     const data = fs.readFileSync('./data.json', 'utf-8') 
     console.log('This is Data ',data)        
@@ -89,6 +99,10 @@ app.delete('/todos/:id',(req,res)=>{
         
 
 })
+
+// create a todo 
+
+
 app.post('/todos/create', (req, res) => {
 
     const { Todo } = req.body;
