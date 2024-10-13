@@ -11,6 +11,6 @@ const ConectingDB = async ()=>{
        console.log('Erorr while conecting the database ', error)  
     } 
 }
-
+// In this db.js we are just going to conect the database that is just mongoDB sql database nothing else . 
 
 export {ConectingDB}
